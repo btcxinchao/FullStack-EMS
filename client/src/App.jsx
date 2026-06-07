@@ -10,6 +10,7 @@ import Settings from './pages/Setting'
 import PrintPayslip from './pages/PrintPayslip'
 import { Navigate } from 'react-router-dom'
 import LoginForm from './components/LoginForm'
+import Attendance from './pages/Attendance'
 const App = () => {
   return (
     <>
@@ -28,6 +29,7 @@ const App = () => {
       <Route element={<Layout/>}>
         <Route path="/dashboard" element= {<Dashboard/>} />
         <Route path="/employees" element= {<Employees/>} />
+        <Route path="/attendance" element= {<Attendance/>} />
         <Route path="/leave" element= {<Leave/>} />
         <Route path="/payslips" element= {<Payslips/>} />
         <Route path="/settings" element= {<Settings/>} />
