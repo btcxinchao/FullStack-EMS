@@ -27,7 +27,7 @@ const SideBar = () => {
     setMobileOpen(false);
   }, [pathname]);
 
-  const role = "" || "EMPOYEE";
+  const role = "ADMIN" || "EMPOYEE";
 
   const navItems = [
     { name: "Dashboard", href: "/dashboard", icon: LayoutGridIcon },
@@ -83,7 +83,7 @@ const SideBar = () => {
             </div>
             <div className="m-w-0">
               <p>{userName}</p>
-              <p>{role === "ADMIN" ? "Adminstrator" : "Employee"}</p>
+              <p>{role === "ADMIN" ? "Administrator" : "Employee"}</p>
             </div>
           </div>
         </div>
@@ -96,7 +96,7 @@ const SideBar = () => {
       </div>
       {/* Navigation list  */}
       <div className="flex-1 px-3 space-y-0.5 overflow-y-auto">
-        {navItems.map((item, index) => {
+        {navItems.map((item) => {
           const isActive = pathname.startsWith(item.href);
           return (
             <Link key={item.name} to={item.href}
@@ -145,7 +145,7 @@ const SideBar = () => {
       {/* Mobile Overlay  */}
       {mobileOpen && (
         <div
-          className="lg:hidden fixed inset-0 bg-black/60 blackdrop-blur-sm z-50"
+          className="lg:hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-50"
           onClick={() => setMobileOpen(false)}
         ></div>
       )}

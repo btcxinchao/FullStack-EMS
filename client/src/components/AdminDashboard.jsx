@@ -18,14 +18,14 @@ const AdminDashboard = ({data}) => {
     {
       icon : CalendarIcon,
       value : data.todayAttendance,
-      title : "Today's Attandance",
+      title : "Today's Attendance",
       description : "Checked in today  "
     },
     {
       icon : FileTextIcon,
       value : data.pendingLeaves,
       title : "Pending leaves",
-      description : "Awaiting aproval"
+      description : "Awaiting approval"
     },
   ]
   return (
@@ -35,7 +35,7 @@ const AdminDashboard = ({data}) => {
           Dashboard
         </h1>
         <p className='page-subtitle'>
-            Welcomback , Admin - here's your overview
+            Welcome back , Admin - here's your overview
         </p>
        </div>
        <div className='grid grid-cols-1  gap-4 sm:grid-cols-2 lg:grid-cols-4 sm:gap-5 mb-8'>
@@ -50,7 +50,7 @@ const AdminDashboard = ({data}) => {
   
                 </div>
                 <s.icon className='size-12 p-2.5 rounded-lg bg-slate-100 text-slate-600 
-                group-hover:bg-indigo-50 group-hover:bg-indigo-600 transition-colors duration-200 '/>
+                group-hover:bg-indigo-50 group-hover:text-indigo-600 transition-colors duration-200 '/>
             </div>
         })}
        </div>
