@@ -1,8 +1,8 @@
 //Create leave 
 //Post /api/leaves
 
-import Employee from "../models/Employee"
-import LeaveAplication from "../models/LeaveAplication"
+import Employee from "../models/Employee.js"
+import LeaveAplication from "../models/LeaveAplication.js"
 
 export const createLeave = async (req, res) => {
     try {
@@ -68,9 +68,7 @@ export const getLeave = async (req, res) => {
             })
             return res.json({ data })
         } else {
-            const employee = await Employee.findOne({
-                userId = session.userId,
-            }).lean();
+            const employee = await Employee.findOne({userId : session.userId}).lean();
             if (!employee) return res.status(404).json({ error: "Not found" })
             const leaves = await LeaveAplication.find({
                 employeeId: employee._id
