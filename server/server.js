@@ -6,7 +6,8 @@ import connectDB from "./config/db.js"
 import routes from "./routes/index.routes.js"
 const app = express()
 const port = 3000
-
+import { serve } from "inngest/express";
+import { inngest, functions } from "./inggest/index.js"
 //middleware
 app.use(cors())
 app.use(express.json())
