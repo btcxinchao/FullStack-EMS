@@ -4,6 +4,7 @@ import profileRoutes from "./profile.routes.js";
 import AttendanceRouter from "./Attendance.route.js";
 import leaveRouter from "./leave.route.js";
 import payslipRouter from "./payslip.route.js";
+import dashboardRouter from "./dashboard.route.js";
 const routes = (app) => {
   app.use("/api/auth", authRouter);
   app.use("/api/employee", employeeRouter);
@@ -11,6 +12,7 @@ const routes = (app) => {
   app.use("/api/attendace", AttendanceRouter);
   app.use("/api/leave", leaveRouter);
   app.use("/api/payslips", payslipRouter);
+  app.use("/api/dashboard", dashboardRouter);
 };
 
 export default routes;
