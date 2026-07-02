@@ -1,10 +1,10 @@
 //get getDashboard for employee and ADMIN
 
-import { DEPARTMENTS } from "../constants/departments"
-import Attendance from "../models/Attendance"
-import Employee from "../models/Employee"
-import LeaveAplication from "../models/LeaveAplication"
-import Payslip from "../models/Payslip"
+import { DEPARTMENTS } from "../constants/departments.js"
+import Attendance from "../models/Attendance.js"
+import Employee from "../models/Employee.js"
+import LeaveAplication from "../models/LeaveAplication.js"
+import Payslip from "../models/Payslip.js"
 
 //GET api/dashboard
 export const getDashboard = async (req,res)=>{
